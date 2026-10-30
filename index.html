@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,16 @@
 </head>
 <body>
 
+<!-- PAGE LOADING SCREEN -->
+<div id="rp-loader">
+  <div class="rp-loader-content">
+    <span class="rp-brand" style="font-size: 28px; justify-content: center; margin-bottom: 12px;">RAKIB<span class="dot"></span></span>
+    <p style="color: var(--text-muted); font-size: 14px; font-weight: 600;">Loading Portfolio Environment...</p>
+  </div>
+</div>
+
 <div id="rakib-portfolio">
+
   <!-- NAVIGATION -->
   <nav class="rp-nav">
     <a class="rp-brand" href="#rp-home">RAKIB<span class="dot"></span></a>
@@ -22,6 +30,7 @@
       <a href="#rp-achievements">Achievements &amp; Certifications</a>
       <a href="#rp-experience">Experience</a>
       <a href="#rp-contact">Contact</a>
+      <button id="cmd-trigger-btn" class="rp-cmd-badge" title="Quick Navigation">Cmd + K</button>
       <a class="rp-cv-btn" href="mailto:riasadrahmanrakib.24@gmail.com">Get In Touch</a>
     </div>
   </nav>
@@ -39,6 +48,7 @@
       <div class="rp-btn-group">
         <a class="rp-btn rp-btn-primary" style="color: #FFFFFF !important;" href="#rp-research">Explore Research ↓</a>
         <a class="rp-btn rp-btn-outline" href="#rp-projects">View Projects</a>
+        <a class="rp-btn rp-btn-outline" href="assets/Riasad_Rahman_Rakib_CV.pdf" download="Riasad_Rahman_Rakib_CV.pdf">Download CV 📄</a>
         <a class="rp-btn rp-btn-outline" href="https://github.com/R-Rakib" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </div>
     </div>
@@ -49,8 +59,8 @@
         <img alt="Riasad Rahman Rakib" class="rp-avatar" src="assets/images/profile.jpeg" loading="lazy">
         <div class="rp-status-badge" title="Available for research &amp; engineering opportunities"></div>
       </div>
-      <h3 style="color:#111827; font-size:22px; font-weight:800; margin-bottom:4px;">Riasad Rahman Rakib</h3>
-      <p style="color:#4B5563; font-size:14px; margin-bottom:18px;">RUET · Department of IPE</p>
+      <h3 style="color:var(--text-main); font-size:22px; font-weight:800; margin-bottom:4px;">Riasad Rahman Rakib</h3>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:18px;">RUET · Department of IPE</p>
       <div class="rp-stats-grid">
         <div class="rp-stat-item">
           <div class="rp-stat-label">ACADEMIC CGPA</div>
@@ -106,7 +116,7 @@
   </section>
 
   <!-- RESEARCH SECTION -->
-  <section class="rp-section" id="rp-research" style="background:#F1F5EF;">
+  <section class="rp-section" id="rp-research" style="background:var(--surface-alt);">
     <div class="rp-section-header">
       <span class="rp-section-tag">Research &amp; Academic Work</span>
       <h2 class="rp-section-title">Research Activities &amp; Case Studies</h2>
@@ -116,7 +126,6 @@
     </div>
 
     <div class="rp-grid-2">
-      <!-- Case Study Card -->
       <div class="rp-card" style="border-left: 6px solid #A3E635;">
         <span class="rp-chip blue" style="align-self: flex-start;">FEATURED CASE STUDY</span>
         <h3 style="margin-top:12px;">A Two-Stage Clustered MILP Framework for Efficient and Resilient Waste Collection Routing</h3>
@@ -128,7 +137,6 @@
         </div>
       </div>
 
-      <!-- Undergraduate Thesis Card -->
       <div class="rp-card" style="border-left: 6px solid #EAB308;">
         <span class="rp-chip amber" style="align-self: flex-start;">UNDERGRADUATE THESIS · ONGOING</span>
         <h3 style="margin-top:12px;">Resilient and Sustainable Supply Chain Network Design for the RMG Sector</h3>
@@ -136,7 +144,7 @@
           Exploring a multi-objective optimization framework for Bangladesh's Ready-Made Garment supply chain. The research focuses on network design under operational disruptions while considering economic performance, environmental impact, and social sustainability.
         </p>
         <div class="rp-chips" style="margin-top: 20px;">
-          <a class="rp-btn rp-btn-outline" style="padding: 10px 18px; font-size: 13px; color: #111827; border-color: #D1D5DB;" href="reserach/case study/Case Study Paper.pdf" target="_blank" rel="noopener noreferrer">📄 View Research Document ↗</a>
+          <a class="rp-btn rp-btn-outline" style="padding: 10px 18px; font-size: 13px; color: var(--text-main); border-color: var(--border-color);" href="reserach/case study/Case Study Paper.pdf" target="_blank" rel="noopener noreferrer">📄 View Research Document ↗</a>
         </div>
       </div>
     </div>
@@ -151,7 +159,6 @@
     </div>
 
     <div class="rp-grid-3">
-      <!-- Project 1: PPE Detection -->
       <a class="rp-project-showcase" href="project/ai based ppe detection/index.html">
         <img alt="PPE Detection" class="rp-proj-thumb" loading="lazy" src="project/ai based ppe detection/main.jpeg">
         <span class="rp-chip blue" style="align-self: flex-start;">Computer Vision · Industrial Safety</span>
@@ -165,7 +172,6 @@
         <div class="rp-proj-link">View Project Details →</div>
       </a>
 
-      <!-- Project 2: AI Dury -->
       <a class="rp-project-showcase" href="project/ai commnetry/index.html">
         <div class="rp-proj-placeholder">⚽ AI Dury Commentary Demo</div>
         <span class="rp-chip blue" style="align-self: flex-start;">Generative AI · Computer Vision</span>
@@ -179,7 +185,6 @@
         <div class="rp-proj-link">View Project Details →</div>
       </a>
 
-      <!-- Project 3: Automatic Cradle -->
       <a class="rp-project-showcase" href="project/automatic cradle/index.html">
         <img alt="Automatic Baby Cradle" class="rp-proj-thumb" loading="lazy" src="project/automatic cradle/main.jpeg">
         <span class="rp-chip blue" style="align-self: flex-start;">Embedded Systems · Automation</span>
@@ -193,7 +198,6 @@
         <div class="rp-proj-link">View Project Details →</div>
       </a>
 
-      <!-- Project 4: Job Assistant -->
       <a class="rp-project-showcase" href="project/job assistant/index.html">
         <div class="rp-proj-placeholder">💼 AI Job Agent Dashboard</div>
         <span class="rp-chip blue" style="align-self: flex-start;">AI Agents · Workflow Automation</span>
@@ -207,7 +211,6 @@
         <div class="rp-proj-link">View Project Details →</div>
       </a>
 
-      <!-- Project 5: Krishok Bondhu -->
       <a class="rp-project-showcase" href="project/krishok bondhu/index.html">
         <div class="rp-proj-placeholder">🌾 Krishok Bondhu Assistant</div>
         <span class="rp-chip blue" style="align-self: flex-start;">Agriculture · Computer Vision</span>
@@ -221,7 +224,6 @@
         <div class="rp-proj-link">View Project Details →</div>
       </a>
 
-      <!-- Project 6: Machining RAG -->
       <a class="rp-project-showcase" href="project/rag machining/index.html">
         <div class="rp-proj-placeholder">📚 Machining Knowledge RAG</div>
         <span class="rp-chip blue" style="align-self: flex-start;">Generative AI · Knowledge Retrieval</span>
@@ -238,7 +240,7 @@
   </section>
 
   <!-- ACHIEVEMENTS & CERTIFICATIONS -->
-  <section class="rp-section" id="rp-achievements" style="background:#F1F5EF;">
+  <section class="rp-section" id="rp-achievements" style="background:var(--surface-alt);">
     <div class="rp-section-header">
       <span class="rp-section-tag">Recognition &amp; Credentials</span>
       <h2 class="rp-section-title">Achievements &amp; Certifications</h2>
@@ -251,8 +253,8 @@
         <p>Achieved 4th place with the AI-Based PPE Detection System at the Orbeetal Idea Contest, held during the 11th RCF Career Fair at RUET.</p>
         <div style="margin-top: 15px; font-weight: 700; color: #16A34A; font-size: 14px;">View Achievement Photos &amp; Event Details →</div>
       </a>
-      
-      <a class="rp-achievement-card" href="certification/Six Sigma Green Belt/Green Belt.pdf" target="_blank" rel="noopener noreferrer" style="border-left-color: #2563EB;">
+
+      <a class="rp-achievement-card" href="certification/Six%20Sigma%20Green%20Belt/Green%20Belt.pdf" target="_blank" rel="noopener noreferrer" style="border-left-color: #2563EB;">
         <h3>📜 Six Sigma Green Belt</h3>
         <p>Professional training and certification in process improvement, the DMAIC methodology, statistical quality control, and continuous improvement principles.</p>
         <div style="margin-top: 15px; font-weight: 700; color: #2563EB; font-size: 14px;">View Certificate PDF ↗</div>
@@ -290,14 +292,14 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section class="rp-section" id="rp-contact" style="background:#F1F5EF;">
+  <section class="rp-section" id="rp-contact" style="background:var(--surface-alt);">
     <div class="rp-contact-card">
       <h2>Let's Connect &amp; Collaborate</h2>
       <p>
         I welcome opportunities to collaborate on industrial engineering research, supply chain and operations projects, data analytics, and applied AI. I am also interested in graduate research opportunities and early-career engineering roles.
       </p>
       <div class="rp-contact-links">
-        <a class="rp-contact-item" href="mailto:riasadrahmanrakib.24@gmail.com">✉️ riasadrahmanrakib.24@gmail.com</a>
+        <a class="rp-contact-item" href="mailto:riasadrahmanrakib.24@gmail.com" id="email-copy-link">✉️ riasadrahmanrakib.24@gmail.com (Click to Copy)</a>
         <a class="rp-contact-item" href="https://linkedin.com/in/riasad-rahman-rakib" target="_blank" rel="noopener noreferrer">💼 LinkedIn Profile ↗</a>
         <a class="rp-contact-item" href="https://github.com/R-Rakib" target="_blank" rel="noopener noreferrer">💻 GitHub Repositories ↗</a>
       </div>
@@ -307,9 +309,11 @@
   <!-- FOOTER -->
   <footer class="rp-footer">
     <p>© 2026 Riasad Rahman Rakib · Rajshahi University of Engineering &amp; Technology (RUET)</p>
-    <p style="margin-top: 6px; font-size: 12px; color: #4B5563;">Industrial Engineering · Supply Chain · Operations Research · Applied AI</p>
+    <p style="margin-top: 6px; font-size: 12px; color: var(--text-muted);">Industrial Engineering · Supply Chain · Operations Research · Applied AI</p>
   </footer>
+
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
