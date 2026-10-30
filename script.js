@@ -159,6 +159,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectsList = document.querySelectorAll('.rp-project-showcase');
   projectsList.forEach(proj => {
     proj.addEventListener('click', (e) => {
+      if (proj.getAttribute('href') && proj.getAttribute('href').includes('competition')) {
+        return;
+      }
       e.preventDefault();
       const title = proj.querySelector('h3').innerText;
       const desc = proj.querySelector('p').innerText;
@@ -179,7 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
       <input type="text" id="rp-cmd-input" class="rp-cmd-input" placeholder="Type a command or search sections (e.g. Projects, CV)...">
       <div id="rp-cmd-list" class="rp-cmd-list">
         <div class="rp-cmd-item" data-action="scroll" data-target="#rp-about"><span>Go to About Me</span><span class="shortcut">Section</span></div>
+        <div class="rp-cmd-item" data-action="scroll" data-target="#rp-skills"><span>Go to Core Skills</span><span class="shortcut">Section</span></div>
         <div class="rp-cmd-item" data-action="scroll" data-target="#rp-research"><span>Go to Research & Case Studies</span><span class="shortcut">Section</span></div>
+        <div class="rp-cmd-item" data-action="scroll" data-target="#rp-competitions"><span>Go to Competitions</span><span class="shortcut">Section</span></div>
         <div class="rp-cmd-item" data-action="scroll" data-target="#rp-projects"><span>Go to Projects</span><span class="shortcut">Section</span></div>
         <div class="rp-cmd-item" data-action="scroll" data-target="#rp-achievements"><span>Go to Achievements & Certifications</span><span class="shortcut">Section</span></div>
         <div class="rp-cmd-item" data-action="scroll" data-target="#rp-experience"><span>Go to Industrial Experience</span><span class="shortcut">Section</span></div>
